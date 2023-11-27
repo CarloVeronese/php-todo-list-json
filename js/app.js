@@ -43,7 +43,19 @@ createApp({
                 .then(res => {
                     this.todos = res.data.results;
                 })
-
+        },
+        destroyTask(index) {
+            const data = {
+                'index': index
+            }
+            axios.post('./destroy.php', data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            }).then(res => {
+                this.todos = res.data.results;
+                // console.log(res.data);
+            })
         }
     },
     created() {

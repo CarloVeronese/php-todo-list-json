@@ -24,3 +24,7 @@ h1 {
 .done {
     text-decoration: line-through;
 }
+
+.task-cross {
+    cursor: pointer;
+}

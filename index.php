@@ -19,7 +19,10 @@
         <section>
             <div class="container">
                 <ul>
-                    <li v-for="(todo, index) in todos" :class="todo.done ? 'done' : ''" @click="taskDone(index)">{{ todo.text }}</li>
+                    <li v-for="(todo, index) in todos" :class="todo.done ? 'done' : ''">
+                        <span @click="taskDone(index)">{{ todo.text }}</span>
+                        <span class="task-cross" @click="destroyTask(index)">&cross;</span>
+                    </li>
                 </ul>
             </div>
         </section>
