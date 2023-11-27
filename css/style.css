@@ -20,3 +20,7 @@ ul {
 h1 {
     padding-bottom: 20px;
 }
+
+.done {
+    text-decoration: line-through;
+}

@@ -29,6 +29,21 @@ createApp({
                 return
             }
             this.newTask = '';
+        },
+        taskDone(index) {
+            const data = {
+                "index": index
+            }
+            axios
+                .post('./complete.php', data, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                })
+                .then(res => {
+                    this.todos = res.data.results;
+                })
+
         }
     },
     created() {
