@@ -13,7 +13,7 @@
         <section>
             <div class="container">
                 <h1>To Do List</h1>
-                <input type="text">
+                <input type="text" v-model="newTask" @keyup.enter="addNewTask">
             </div>
         </section>
         <section>
