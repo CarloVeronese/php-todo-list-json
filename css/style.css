@@ -28,3 +28,12 @@ h1 {
 .task-cross {
     cursor: pointer;
 }
+
+.task {
+    display: flex;
+    gap: 20px;
+}
+
+.task-text {
+    width: 60px;
+}
